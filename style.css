@@ -1,0 +1,75 @@
+/* INTRO */
+
+:root {
+    --primary-color: rgb(0, 132, 255);
+    --primary-dark-color: rgb(0, 68, 131);
+    --accent-color: rgb(218, 95, 255);
+    --light-color: white;
+    --gradient: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+#intro-view {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(212, 239, 255);
+    font-family: Barlow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient)
+}
+
+#intro-view h1, a {
+    text-align: center;
+    color: var(--light-color);
+}
+
+#intro-view h1 {
+    font-size: 50px;
+    width: 35vw;
+}
+
+#intro-view a {
+    text-decoration: none;
+    font-size: 45px;
+    border-style: solid;
+    border-color: var(--light-color);
+    border-radius: 24px;
+    -webkit-transition: all 0.3s;
+    width: fit-content;
+    height: fit-content;
+}
+
+#intro-view p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 10px 30px 10px 0px;
+    text-align: center;
+}
+
+#intro-view a:hover {
+    background-color: white;
+    color: var(--light-color);
+    transform: rotate(5deg);
+    box-shadow: rgba(128, 128, 128, 0.425) 0px 3px 20px 0px;
+}
+
+#intro-view a:hover p {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* MAIN */
+
+/*
+border-style: solid;
+border-color: red;
+border-width: 2px; */
