@@ -3,7 +3,7 @@
     --primary-color: rgb(123, 185, 24);
     --primary-dark-color:rgb(0, 131, 81);
     --secondary-color:rgb(0, 109, 90);
-    --accent-color: rgb(195, 65, 255);
+    --accent-color: rgb(253, 0, 58);
     --section-background-color: rgb(255, 247, 220);
     --light-color: white;
     --dark-color: rgb(92, 92, 92);
@@ -46,12 +46,12 @@ h4 {
 }
 
 h5 {
-    font-size: 25px;
+    font-size: 27px;
 }
 
 p {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
     margin-block-end: 0px;
     margin-block-start: 0px;
 }
@@ -67,6 +67,11 @@ hr {
     height: 2px;
     background-color: #ccc;
     border: none;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 10px 100px;
 }
 /* INTRO */
 
@@ -121,13 +126,14 @@ hr {
 }
 
 #intro-view a:hover {
-
+    
     transform: rotate(5deg);
     box-shadow: rgba(128, 128, 128, 0.425) 0px 3px 20px 3px;
 }
 
 
 /* MAIN */
+
 main {
     position: absolute;
     top: 100vh; /*TODO: make this 100vh*/
@@ -136,6 +142,10 @@ main {
     width: 100%;
 }
 
+.even-section {
+    background-color: var(--section-background-color);
+}
+/* about */
 #pfp {
     width: 200px;
     height: 200px;
@@ -152,14 +162,7 @@ main {
     margin: 10px auto;
 }
 
-section {
-    margin-bottom: 50px;
-    padding: 10px 100px;
-}
-
-.even-section {
-    background-color: var(--section-background-color);
-}
+/* experience */
 
 .experiences {
     display: flex;
@@ -176,18 +179,32 @@ section {
     margin-left: 73px;
 }
 
+.experience a{
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.experience a:hover{
+    text-decoration: underline;
+}
+
 .experience-title {
-    width: 50%;
+    width: 35%;
+}
+
+.experience-title h4{
+    max-width: 80%;
 }
 
 .experience-details {
-    width: 110%;
+    width: 65%;
     justify-self: flex-start;
 }
 
 .experience-details h5 {
     margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-block-end: 10px;
+    
 }
 
 .icon-header {
@@ -203,8 +220,187 @@ section {
     margin-right: 25px;
 }
 
+.experience-details-header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
 
-/*
-border-style: solid;
+.experience-details-header p {
+    color: var(--accent-color);
+}
+
+.experience-details-header img {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+/* skills */
+
+.skills-grid {
+    display: grid;
+    column-gap: 200px;
+    width: fit-content;
+    margin: auto;
+}
+
+.technical {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.language {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+}
+
+.skill {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.skill h5 {
+    width: 70%;
+    margin-right: 20px;
+    height: fit-content;
+    align-self: center;
+}
+
+.skill-level {
+    display: flex;
+    height: fit-content;
+    align-self: center;
+}
+
+.skill:hover .filled {
+    background-color: var(--primary-color);
+    box-shadow: var(--primary-color) 0px 0px 5px;
+}
+
+.point {
+    border-radius: 50%;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: var(--dark-color);
+    margin-right: 5px;
+    
+}
+
+.filled {
+    background-color: var(--accent-color);
+    transition: background-color 0.2s, box-shadow 0.2s;
+    
+}
+
+/* projects */
+
+.projects {
+    display: grid;
+    width: 620px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin: 100px auto;
+}
+
+.project {
+    position: relative;
+    background-color: var(--primary-dark-color);
+    width: 100%;
+    height: 200px;
+}
+
+.project .info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    color: white;
+    opacity: 0;    
+    transition: opacity 0.3s;
+}
+
+.info h5, .info p {
+    color: white;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin: 8px 8px 8px 16px;
+}
+
+.info hr {
+    width: 0%;
+    margin-inline-start: 16px;
+    
+}
+
+.prj-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.project:hover .prj-image {
+    opacity: 0.1;
+}
+
+.project:hover .info {
+    opacity: 1;
+}
+
+.project:hover hr {
+    animation-name: hr-extend;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hr-extend {
+    to {
+        width: 35%;
+    }
+}
+
+#pr1 {
+    grid-column: 1/3;
+}
+
+#pr4 {
+    grid-column: 2/4;
+}
+
+/* media queries */
+
+@media (max-width: 1190px) {
+    .technical{
+        grid-template-columns: repeat(auto-fit, 500px);
+    }
+    
+    .language{
+        grid-template-columns: repeat(auto-fit, 500px);
+    }
+    
+    .projects {
+        width: 350px;
+        grid-template-columns: 350px;
+    }
+    
+    #pr1 {
+        grid-column: unset;
+    }
+    
+    #pr4 {
+        grid-column: unset;
+    }
+}
+
+/* border-style: solid;
 border-color: red;
 border-width: 2px; */
