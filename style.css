@@ -196,12 +196,12 @@ main {
     margin-left: 73px;
 }
 
-.experience a{
+a{
     color: var(--accent-color);
     text-decoration: none;
 }
 
-.experience a:hover{
+a:hover{
     text-decoration: underline;
 }
 
@@ -299,17 +299,22 @@ main {
 
 .point {
     border-radius: 50%;
-    height: 1.2em;
-    width: 1.2em;
-    background-color: var(--dark-color);
+    height: 0.95em;
+    width: 0.95em;
+    background-color: transparent;
+    border-color: var(--dark-color);
+    border-style: solid;
+    border-width: 2px;
     margin-right: 5px;
     
 }
 
 .filled {
-    background-color: var(--accent-color);
+    background-color: var(--primary-dark-color);
     transition: background-color 0.2s, box-shadow 0.2s;
-    
+    border-style: none;
+    height: 1.2em;
+    width: 1.2em;
 }
 
 /* projects */
@@ -402,6 +407,27 @@ main {
 }
 
 
+/* awards and certificates */
+.award {
+    text-align: center;
+    width: 60%;
+    margin: 0px auto 70px auto;
+
+}
+
+.double-icon-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.double-icon-header img{
+    width: 2.7em;
+    height: 2.7em;
+    margin: 0px 20px 0px 20px;
+}
 
 /* media queries */
 
