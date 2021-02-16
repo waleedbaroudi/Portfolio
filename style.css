@@ -480,7 +480,7 @@ a:hover{
 /* contact */
 
 #footer-section {
-    background-color: var(--dark-accent-color);
+    background-color: rgb(34, 138, 119);
     margin-bottom: 0px;
     text-align: center;
 }
