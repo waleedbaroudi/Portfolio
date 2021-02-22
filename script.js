@@ -1,5 +1,11 @@
 var topButton = document.getElementById("top-button");
 
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-FW4EJP35HG');
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction(){
