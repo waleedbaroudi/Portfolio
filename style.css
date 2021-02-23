@@ -81,8 +81,6 @@ h2 {
 
 h3 {
     font-size: 40px;
-    margin-block-end: 50px;
-    
 }
 
 h4 {
@@ -263,17 +261,6 @@ main {
     transition: width 1s, margin-left 0.5s;
 }
 
-#pfp-div:hover img {
-    box-shadow: rgba(128, 128, 128, 0.733) 0px 3px 10px;
-    width: 150px;
-    height: 150px;
-}
-
-#pfp-div:hover p {
-    margin-left: 8px;
-    width: 500px;
-}
-
 #summary {
     width: 70vw;
     color: var(--dark-color);
@@ -332,11 +319,12 @@ a:hover{
     align-items: center;
     justify-content: space-between;
     width: fit-content;
+    font-size: 40px;
 }
 
 .icon-header img {
-    width: 3em;
-    height: 3em;
+    width: 1.3em;
+    height: 1.3em;
     margin-right: 25px;
 }
 
@@ -704,9 +692,82 @@ a:hover{
         width: 100%;
     }
 
+    section {
+        padding: 10px 10px;
+    }
+
     h1 {
+        font-size: 35px;
+        width: 85% !important;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding: 0px 5px 0px 5px;
+    }
+
+    h3 {
         font-size: 30px;
-        width: 90% !important;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .icon-header {
+        font-size: 30px;
+    }
+
+    #summary {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .experience-title {
+        width: 90%;
+    }
+
+    .experience-details {
+        width: 90%;
+    }
+
+    .experience-details-header {
+        flex-flow: column;
+        margin-right: 8px;
+        margin-bottom: 10px;
+    }
+
+    .award {
+        width: 85%;
+    }
+
+    .certificate {
+        width: 85%;
+    }
+
+    .contact-entry {
+        width: 80%;
+    }
+
+    .social-bar {
+        width: 80%;
+    }
+
+    #top-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    #pfp-div {
+        flex-flow: column;
     }
 }
 
@@ -717,6 +778,17 @@ a:hover{
     
     #intro-flag:hover #arrow{
         transform: rotate(180deg);
+    }
+
+    #pfp-div:hover img {
+        box-shadow: rgba(128, 128, 128, 0.733) 0px 3px 10px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #pfp-div:hover p {
+        margin-left: 8px;
+        width: 500px;
     }
 }
 
