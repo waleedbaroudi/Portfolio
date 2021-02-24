@@ -195,9 +195,7 @@ section {
     transition: transform 0.2s;
 }
 
-.intro-icon:hover {
-    transform: rotate(5deg);
-}
+
 
 #intro-view p {
     margin-block-start: 0px;
@@ -437,7 +435,7 @@ a:hover{
     color: white;
     opacity: 0;    
     transition: opacity 0.3s;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .info h5, .info p {
@@ -467,26 +465,6 @@ a:hover{
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s;
-}
-
-.project:hover .prj-image {
-    opacity: 0.1;
-}
-
-.project:hover .info {
-    opacity: 1;
-}
-
-.project:hover hr {
-    animation-name: hr-extend;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes hr-extend {
-    to {
-        width: 35%;
-    }
 }
 
 #pr1 {
@@ -673,6 +651,7 @@ a:hover{
     .experience {
         flex-flow: column;
         border-bottom-style: solid;
+        border-bottom-width: 1px;
         padding-bottom: 10px;
     }
     
@@ -687,87 +666,107 @@ a:hover{
         width: 100%;
         height: 100vh;
     }
-
+    
     main {
         width: 100%;
     }
-
+    
     section {
         padding: 10px 10px;
     }
-
+    
     h1 {
         font-size: 35px;
         width: 85% !important;
     }
-
+    
     h2 {
         font-size: 40px;
         padding: 0px 5px 0px 5px;
     }
-
+    
     h3 {
         font-size: 30px;
     }
-
+    
     h4 {
         font-size: 25px;
     }
-
+    
     h5 {
         font-size: 22px;
     }
-
+    
     p {
         font-size: 20px;
     }
-
+    
     .icon-header {
         font-size: 30px;
     }
-
+    
     #summary {
         width: 90%;
         font-size: 22px;
     }
-
+    
     .experience-title {
         width: 90%;
     }
-
+    
     .experience-details {
-        width: 90%;
+        width: 97%;
     }
-
+    
     .experience-details-header {
         flex-flow: column;
         margin-right: 8px;
         margin-bottom: 10px;
     }
-
+    
     .award {
-        width: 85%;
+        width: 90%;
     }
-
+    
     .certificate {
         width: 85%;
     }
-
+    
     .contact-entry {
         width: 80%;
     }
-
+    
     .social-bar {
         width: 80%;
     }
-
+    
     #top-button {
         width: 32px;
         height: 32px;
     }
-
+    
     #pfp-div {
         flex-flow: column;
+    }
+    
+    .experience {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+    .projects {
+        width: 85%;
+        grid-template-columns: 100%;
+        grid-template-rows: 150px 150px 150px 150px;
+        margin-bottom: 30px;
+    }
+
+    .project {
+        height: 100%;
+    }
+
+    .double-icon-header img{
+        margin: 0px;
     }
 }
 
@@ -779,7 +778,7 @@ a:hover{
     #intro-flag:hover #arrow{
         transform: rotate(180deg);
     }
-
+    
     #pfp-div:hover img {
         box-shadow: rgba(128, 128, 128, 0.733) 0px 3px 10px;
         width: 150px;
@@ -789,6 +788,31 @@ a:hover{
     #pfp-div:hover p {
         margin-left: 8px;
         width: 500px;
+    }
+    
+    .project:hover .prj-image {
+        opacity: 0.1;
+    }
+    
+    .project:hover .info {
+        overflow: auto;
+        opacity: 1;
+    }
+    
+    .project:hover hr {
+        animation-name: hr-extend;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes hr-extend {
+        to {
+            width: 35%;
+        }
+    }
+    
+    .intro-icon:hover {
+        transform: rotate(5deg);
     }
 }
 
